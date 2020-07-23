@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Curso JavaScript</title>
+    <input type="text" name="nome" id="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+
+</head>
+
+<body>
+    <ul class="lista"></ul>
+
+    <script>
+
+        var lista = document.querySelector(".lista");
+
+        function adicionar(){
+            var texto = document.getElementById("nome");
+            var item = document.createElement("li");
+            item.innerHTML = texto.value;
+            lista.appendChild(item);
+            texto.value = "";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

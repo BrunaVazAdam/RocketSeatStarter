@@ -1,0 +1,49 @@
+<!--Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:-->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso JavaScript</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button onclick="criaQuadrado()">Cria Quadrado</button>
+        <div class="quadrados"></div>
+    </div>
+
+    <script>
+
+        function criaQuadrado() {
+            var quadrados = document.querySelector('.quadrados');
+
+            var quadrado = document.createElement('div');
+
+            quadrado.addEventListener("mouseenter", function (){
+                quadrado.style.backgroundColor = getRandomColor();
+            })
+
+            quadrado.style.width = 100;
+            quadrado.style.height = 100;
+            quadrado.style.backgroundColor = 'f00';
+
+            quadrados.appendChild(quadrado);
+
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+    </script>
+
+</body>
+
+</html>

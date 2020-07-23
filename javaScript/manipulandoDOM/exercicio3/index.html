@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Curso JavaScript</title>
+    
+</head>
+
+<body>
+    <ul class="lista"></ul>
+
+    <script>
+
+        var lista = document.querySelector(".lista");
+        var listaNomes = ["Diego", "Gabriel", "Lucas"];
+
+        listaNomes.forEach(function (nome) {
+            var item = document.createElement("li");
+            item.innerHTML = nome;
+            lista.appendChild(item);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
